@@ -60,7 +60,7 @@ namespace CSF.WebDriverFactory.Impl
       else
         output = FirefoxDriverService.CreateDefaultService(DriverPath);
 
-      output.HideCommandPromptWindow = true;
+      output.HideCommandPromptWindow = false;
       output.SuppressInitialDiagnosticInformation = false;
 
       if(DriverPort.HasValue)
