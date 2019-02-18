@@ -2,6 +2,7 @@
 using CSF.Screenplay.Reporting;
 using CSF.Screenplay.SpecFlow;
 using CSF.Screenplay.SpecFlow.Tests.Abilities;
+using NUnit.Framework;
 
 [assembly: ScreenplayAssembly(typeof(CSF.Screenplay.SpecFlow.Tests.ScreenplayConfig))]
 
@@ -15,7 +16,7 @@ namespace CSF.Screenplay.SpecFlow.Tests
         config
           .SubscribeToActorsCreatedInCast()
           .WithFormattingStrategy<ReportFormatting.TimeSpanFormattingStrategy>()
-          .WithScenarioRenderer(JsonScenarioRenderer.CreateForFile("SpecFlow.report.json"))
+          .WithScenarioRenderer(JsonScenarioRenderer.CreateForFile(TestContext.CurrentContext.WorkDirectory + "\\SpecFlow.report.json"))
           ;
       });
 
