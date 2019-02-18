@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -7,10 +7,11 @@
     <OutputType>Library</OutputType>
     <RootNamespace>CSF.Screenplay</RootNamespace>
     <AssemblyName>CSF.Screenplay.Reporting</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <ReleaseVersion>0.14.0-beta</ReleaseVersion>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>..\CSF-Software-OSS.snk</AssemblyOriginatorKeyFile>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -46,9 +47,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Resources\ExceptionFormats.Designer.cs">
-      <DependentUpon>ExceptionFormats.resx</DependentUpon>
-    </Compile>
     <Compile Include="Reporting\Builders\IBuildsReports.cs" />
     <Compile Include="Reporting\Builders\IBuildsScenario.cs" />
     <Compile Include="Reporting\Builders\IGetsReport.cs" />
@@ -123,6 +121,11 @@
     <Compile Include="Reporting\IWritesReportOneScenarioAtATime.cs" />
     <Compile Include="ReportModel\IGetsReport.cs" />
     <Compile Include="Reporting\JsonReportReader.cs" />
+    <Compile Include="Resources\ExceptionFormats.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ExceptionFormats.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CSF.Screenplay\CSF.Screenplay.csproj">
@@ -130,15 +133,7 @@
       <Name>CSF.Screenplay</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\" />
-    <Folder Include="Reporting\" />
-    <Folder Include="Reporting\Builders\" />
-    <Folder Include="Reporting\Trace\" />
-    <Folder Include="ReportFormatting\" />
-    <Folder Include="ReportModel\" />
-    <Folder Include="ReportModel\Adapters\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
     <None Include="CSF.Screenplay.Reporting.nuspec" />
@@ -147,7 +142,6 @@
   <ItemGroup>
     <EmbeddedResource Include="Resources\ExceptionFormats.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LogicalName>ExceptionFormats.resources</LogicalName>
       <LastGenOutput>ExceptionFormats.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>

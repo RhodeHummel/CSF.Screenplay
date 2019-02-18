@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -7,10 +7,11 @@
     <OutputType>Library</OutputType>
     <RootNamespace>CSF.Screenplay.NUnit</RootNamespace>
     <AssemblyName>CSF.Screenplay.NUnit</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <ReleaseVersion>0.14.0-beta</ReleaseVersion>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>..\CSF-Software-OSS.snk</AssemblyOriginatorKeyFile>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -45,13 +46,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\ExceptionFormats.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ExceptionFormats.resx</DependentUpon>
+    </Compile>
     <Compile Include="ScreenplayAssemblyAttribute.cs" />
     <Compile Include="ScreenplayAttribute.cs" />
     <Compile Include="ScenarioAdapter.cs" />
     <Compile Include="IntegrationReader.cs" />
-    <Compile Include="Resources\ExceptionFormats.Designer.cs">
-      <DependentUpon>ExceptionFormats.resx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -65,12 +68,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Resources\ExceptionFormats.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LogicalName>ExceptionFormats.resources</LogicalName>
       <LastGenOutput>ExceptionFormats.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
