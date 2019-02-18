@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using CSF.Screenplay.Reporting.Tests.Autofixture;
-using Ploeh.AutoFixture;
-using Ploeh.AutoFixture.AutoMoq;
-using Ploeh.AutoFixture.NUnit3;
+using AutoFixture;
+using AutoFixture.AutoMoq;
+using AutoFixture.NUnit3;
 
 namespace CSF.Screenplay.Reporting.Tests
 {

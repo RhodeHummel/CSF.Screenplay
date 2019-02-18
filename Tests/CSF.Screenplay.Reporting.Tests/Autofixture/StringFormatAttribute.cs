@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Reflection;
 using Moq;
-using Ploeh.AutoFixture;
-using Ploeh.AutoFixture.NUnit3;
+using AutoFixture;
+using AutoFixture.NUnit3;
 using CSF.Screenplay.ReportFormatting;
 
 namespace CSF.Screenplay.Reporting.Tests.Autofixture

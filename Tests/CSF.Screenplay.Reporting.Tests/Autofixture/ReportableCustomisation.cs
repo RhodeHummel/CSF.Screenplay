@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
-using Ploeh.AutoFixture;
-using Ploeh.AutoFixture.Kernel;
+using AutoFixture;
+using AutoFixture.Kernel;
 
 namespace CSF.Screenplay.Reporting.Tests.Autofixture
 {

@@ -27,7 +27,7 @@ using System;
 using CSF.Screenplay.Actors;
 using Moq;
 using NUnit.Framework;
-using Ploeh.AutoFixture.NUnit3;
+using AutoFixture.NUnit3;
 
 namespace CSF.Screenplay.Tests.Actors
 {

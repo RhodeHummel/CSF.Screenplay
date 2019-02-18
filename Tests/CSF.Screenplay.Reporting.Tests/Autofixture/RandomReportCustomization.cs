@@ -25,7 +25,7 @@
 // THE SOFTWARE.
 using System;
 using System.Linq;
-using Ploeh.AutoFixture;
+using AutoFixture;
 
 namespace CSF.Screenplay.Reporting.Tests.Autofixture
 {

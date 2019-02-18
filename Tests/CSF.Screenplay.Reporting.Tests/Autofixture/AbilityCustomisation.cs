@@ -2,7 +2,7 @@
 using CSF.Screenplay.Abilities;
 using CSF.Screenplay.Actors;
 using Moq;
-using Ploeh.AutoFixture;
+using AutoFixture;
 
 namespace CSF.Screenplay.Reporting.Tests.Autofixture
 {

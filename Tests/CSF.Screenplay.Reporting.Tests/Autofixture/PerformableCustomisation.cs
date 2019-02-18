@@ -1,6 +1,6 @@
 ﻿using System;
 using CSF.Screenplay.Performables;
-using Ploeh.AutoFixture;
+using AutoFixture;
 using Moq;
 using CSF.Screenplay.Actors;
 
